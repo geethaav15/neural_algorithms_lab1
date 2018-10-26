@@ -1,3 +1,4 @@
+#This file takes the input of IRIS data set and converts to the required input for Perceptron learning rule
 import csv
 training = []
 with open('iris.csv', 'rb') as f:
