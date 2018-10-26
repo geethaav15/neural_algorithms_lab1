@@ -1,8 +1,11 @@
+#Implements the perceptron rule for IRIS dataset
+
 import numpy as np
-import iris
+import iris 
 
 #print iris.X
 #print iris.d
+#Training
 
 X = iris.X
 X = np.array(X)
@@ -35,6 +38,7 @@ for n in range(1,5):
         w = delta_w+w
     print n, i, w
 final_out = []
+#Testing
 print "Testing"
 for i,x in enumerate(y):
     net = np.dot(y[i],w)
