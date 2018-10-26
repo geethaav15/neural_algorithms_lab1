@@ -1,4 +1,5 @@
-import pandas
+#This code plots the graph for IRIS dataset sepal length vs sepal width
+#import pandas
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.patches as mpatches
@@ -10,12 +11,15 @@ with open('iris.csv', 'rb') as f:
     reader = csv.reader(f)
     for row in reader:
         training = training+[row]
+	
 #conversion of data-sets to a list
 training = training[:-1] # truncated the last one
 print training
 print "Data details"
 print "Total samples", len(training)
+
 flower_type = [x[4] for x in training]
+
 for i in range(len(training)):
     x,y = [training[i][0],training[i][1]]
     scale=100
