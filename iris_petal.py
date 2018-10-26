@@ -1,4 +1,5 @@
-import pandas
+#Plot of petals length vs petal width for IRIS dataset
+#import pandas
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.patches as mpatches
@@ -11,6 +12,7 @@ with open('iris.csv', 'rb') as f:
     for row in reader:
         training = training+[row]
 #conversion of data-sets to a list
+
 training = training[:-1] # truncated the last one
 print training
 print "Data details"
@@ -23,7 +25,6 @@ for i in range(len(training)):
     color = ""
     if flower == "Iris-setosa":
 		color = "red"
-
     elif flower == "Iris-versicolor":
 		color = "green"
     elif flower == "Iris-virginica":
