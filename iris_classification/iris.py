@@ -10,7 +10,7 @@ training = training[:-1] # truncated the last one
 #print training
 print "Data details"
 print "Total samples", len(training)
-#Conversion of "Iris-Sesots" to 1 and "Iris-virginica" to -1"
+#Conversion of "Iris-Setosa" to 1 and "Iris-virginica" to -1"
 for sample in training:
     if sample[4] =="Iris-setosa":
         sample[4] = 1
