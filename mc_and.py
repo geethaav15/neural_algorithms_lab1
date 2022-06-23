@@ -9,6 +9,28 @@ def McAnd(x,w,t):
         output = 0
     return output
 
+## MP-OR
+def McOR(x,w,t):
+    net = np.dot(x,w)
+    #Using Bipolar Activation
+    if net>t:
+        output = 1
+    else:
+        output = -1
+    return output
+
+## MP-NOT
+def McNot(x,w,t):
+    #Using Sigmoidal Activation
+    net = np.dot(x,w);
+    out = 1/(1+np.exp(-0.1*net));
+    if out>0.5:
+        output = 1
+    else:
+        output = 0
+    return output
+
+
 x0 = np.array([0,0,1])
 x1 = np.array([0,1,1])
 x2 = np.array([1,0,1])
