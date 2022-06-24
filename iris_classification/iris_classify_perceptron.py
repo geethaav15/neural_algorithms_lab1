@@ -1,7 +1,6 @@
 #Implements the perceptron rule for IRIS dataset
-
 import numpy as np
-import iris 
+import iris
 
 #print iris.X
 #print iris.d
@@ -9,26 +8,26 @@ import iris
 
 X = iris.X
 X = np.array(X)
-print "Input values"
-print X
+print ("Input values")
+print (X)
 
 d = iris.d
 d = np.array(d)
-print "Teacher values"
-print d
-print "length", len(d)
+print ("Teacher values")
+print (d)
+print ("length", len(d))
 
-print "initial weights"
+print ("initial weights")
 w = np.zeros(4)
-print w
-c = 0.1
+print (w)
+c = (0.1)
 
 y=X.astype(np.float)
-print y.dtype
+print (y.dtype)
 
 for n in range(1,5):
     for i, x in enumerate(y):
-        net = np.dot(y[i],w) 
+        net = np.dot(y[i],w)
         if net > 0:
             out = 1
         else:
@@ -36,10 +35,10 @@ for n in range(1,5):
         r = c*(d[i] - out)
         delta_w = r*x
         w = delta_w+w
-    print n, i, w
+    print (n, i, w)
 final_out = []
 #Testing
-print "Testing"
+print ("Testing")
 for i,x in enumerate(y):
     net = np.dot(y[i],w)
     if net>0:
@@ -47,10 +46,5 @@ for i,x in enumerate(y):
     else:
         out = -1
     final_out = final_out+[out]
-print "final output", final_out
-print "d", d
-
-
-
-
-
+print ("final output", final_out)
+print ("d", d)
